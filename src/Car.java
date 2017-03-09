@@ -67,6 +67,10 @@ public class Car {
         this.color = color;
     }
 
+    Car(Car car){
+        this(car.brand, car.model, car.version, car.body, car.productionYear,car.color);
+    }
+
     public void printInfo(){
         String info;
         info="Brand: "+brand+", "+ "Model: "+model+", "+"Version: "+version+", "+
