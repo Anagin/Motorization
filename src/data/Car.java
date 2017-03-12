@@ -1,14 +1,16 @@
+package data;
+
 /**
  * Created by Przemysław on 2017-03-09.
  */
 public class Car {
 
-        private String brand;
-        private String model;
-        private String version;
-        private String body;
-        private int productionYear;
-        private String color;
+    private String brand;
+    private String model;
+    private String version;
+    private String body;
+    private int productionYear;
+    private String color;
 
     public String getBrand() {
         return brand;
@@ -67,14 +69,15 @@ public class Car {
         this.color = color;
     }
 
-    Car(Car car){
-        this(car.brand, car.model, car.version, car.body, car.productionYear,car.color);
+    Car(Car car) {
+
+        this(car.brand, car.model, car.version, car.body, car.productionYear, car.color);
     }
 
-    public void printInfo(){
+    public void printInfo() {
         String info;
-        info="Brand: "+brand+", "+ "Model: "+model+", "+"Version: "+version+", "+
-                "Body: "+body+", "+"Year: "+productionYear+", "+"Color: "+color;
+        info = "Brand: " + brand + ", " + "Model: " + model + ", " + "Version: " + version + ", " +
+                "Body: " + body + ", " + "Year: " + productionYear + ", " + "Color: " + color;
         System.out.println(info);
     }
 }
