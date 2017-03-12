@@ -1,9 +1,11 @@
 package data;
 
+import java.util.List;
+
 /**
  * Created by Przemysław on 2017-03-12.
  */
-public class Motorcycle extends Vehicle{
+public class Motorcycle extends Vehicle {
     private String type;
 
     public String getType() {
@@ -22,9 +24,9 @@ public class Motorcycle extends Vehicle{
 
     @Override
     public String toString() {
-        String printInfo= "Motorcycle{" +
+        String printInfo = "Motorcycle{" +
                 "brand='" + getBrand() + '\'' +
-                ", model='" + getModel() + '\''+
+                ", model='" + getModel() + '\'' +
                 ", type='" + type + '\'' +
                 ", productionYear=" + getProductionYear() +
                 ", color='" + getColor() + '\'' +
@@ -32,4 +34,10 @@ public class Motorcycle extends Vehicle{
         return printInfo;
     }
 
+    public static void printInfo(List<Motorcycle> motorcycleList) {
+
+        for (int i = 0; i < motorcycleList.size(); i++) {
+            System.out.println(motorcycleList.get(i).toString());
+        }
+    }
 }

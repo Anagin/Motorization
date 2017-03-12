@@ -1,5 +1,7 @@
 package data;
 
+import java.util.List;
+
 /**
  * Created by Przemysław on 2017-03-09.
  */
@@ -22,7 +24,7 @@ public class Car extends Vehicle {
 
     @Override
     public String toString() {
-        String printInfo= "Car{" +
+        String printInfo = "Car{" +
                 "brand='" + getBrand() + '\'' +
                 ", model='" + getModel() + '\'' +
                 ", productionYear=" + getProductionYear() +
@@ -30,4 +32,14 @@ public class Car extends Vehicle {
                 '}';
         return printInfo;
     }
+
+    public static void printInfo(List<Car> carList) {
+
+        for (int i = 0; i < carList.size(); i++) {
+            System.out.println(carList.get(i).toString());
+        }
+
+
+    }
+
 }
