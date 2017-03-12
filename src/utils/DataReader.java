@@ -31,10 +31,16 @@ public class DataReader {
         System.out.println("Body: ");
         String body = sc.nextLine();
         System.out.println("Production year: ");
-        try {
-            productionYear = sc.nextInt();
-        } catch (InputMismatchException ex) {
-            System.out.println("The value is not an int");
+
+        boolean wrongYearProductionInput = true;
+        while(wrongYearProductionInput) {
+            try {
+                productionYear = sc.nextInt();
+                wrongYearProductionInput=false;
+            } catch (InputMismatchException ex) {
+                System.out.println("The value is not an int, Type it one more time!");
+                sc.nextLine();
+            }
         }
         System.out.println("Color: ");
         String color = sc.nextLine();
@@ -52,10 +58,15 @@ public class DataReader {
         System.out.println("Type: ");
         String type = sc.nextLine();
         System.out.println("Production year: ");
-        try {
-            productionYear = sc.nextInt();
-        } catch (InputMismatchException ex) {
-            System.out.println("The value is not an int");
+        boolean wrongYearProductionInput = true;
+        while(wrongYearProductionInput) {
+            try {
+                productionYear = sc.nextInt();
+                wrongYearProductionInput= false;
+            } catch (InputMismatchException ex) {
+                System.out.println("The value is not an int, type in one more time!");
+                sc.nextLine();
+            }
         }
         System.out.println("Color: ");
         String color = sc.nextLine();
