@@ -21,7 +21,7 @@ public class FactoryApp {
 
         System.out.println("Application name: " + appName);
         System.out.println("Create car: ");
-        carList.add(dR.readAndCreateCar());
+
         carList.add(dR.readAndCreateCar());
 
         System.out.println("Create motorcycle: ");
